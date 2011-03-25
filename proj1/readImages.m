@@ -11,8 +11,8 @@ function [images, exposureTimes] = readImages(folder, extension)
 %  exposureTimes: (number, 1) matrices, representing image's exposure time in second.
 %
 % note
-%  We assume the input images have the same dimension, channel number and color space.
-%  
+%  We assume the input images have the same dimension, channel number and color space,
+%  with EXIF metadata.
 %
     images = [];
     exposureTimes = [];
@@ -22,22 +22,20 @@ function [images, exposureTimes] = readImages(folder, extension)
     end
 
     files = dir([folder, '/*.', extension]);
+
+    % grab images info to initialize images and exposureTimes.
+    filename = [folder, '/', files(1).name];
+    info = imfinfo(filename);
     number = length(files);
+    images = zeros(info.Height, info.Width, info.NumberOfSamples, number);
     exposureTimes = zeros(number, 1);
+
     for i = 1:number
 	filename = [folder, '/', files(i).name];
-	img = double(imread(filename));
-	[row, col, channel] = size(img);
-	if( i == 1 )
-	    images = zeros(row, col, channel, number);
-	end
+	img = imread(filename);
 	images(:,:,:,i) = img;
 
-	try
-	    exif = exifread(filename);
-	    exposureTimes(i) = exif.ExposureTime;
-	catch
-	    exposureTimes(i) = 1;
-	end
+	exif = exifread(filename);
+	exposureTimes(i) = exif.ExposureTime;
     end
 end
