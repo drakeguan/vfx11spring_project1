@@ -1,4 +1,5 @@
 [images, exposures] = readImages('exposures');
+ln_t = log(exposures);
 
 disp('resizing the images.');
 [row, col, channel, number] = size(images);
@@ -17,7 +18,7 @@ w = w/max(w);
 
 for channel = 1:3
     rsimages = reshape(simages(:,:,channel,:), srow*scol, number);
-    [g(:,channel), lnE(:,channel)] = gsolve(rsimages, log(exposures), 10, w);
+    [g(:,channel), lnE(:,channel)] = gsolve(rsimages, ln_t, 10, w);
 end
 
 %plot(g);
