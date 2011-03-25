@@ -1,4 +1,4 @@
-function [images, exposureTimes] = readImages(folder, extension)
+%
 % read in several images with different exposures.
 %
 % input
@@ -14,6 +14,7 @@ function [images, exposureTimes] = readImages(folder, extension)
 %  We assume the input images have the same dimension, channel number and color space,
 %  with EXIF metadata.
 %
+function [images, exposureTimes] = readImages(folder, extension)
     images = [];
     exposureTimes = [];
 
