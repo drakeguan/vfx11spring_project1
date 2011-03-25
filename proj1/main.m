@@ -12,7 +12,7 @@ end
 disp('calculating camera response function by gsolve.');
 g = zeros(256, 3);
 lnE = zeros(srow*scol, 3);
-w = weightingFunction('deb97');
+w = weightingFunction('debevec97');
 w = w/max(w);
 
 for channel = 1:3
@@ -20,7 +20,7 @@ for channel = 1:3
     [g(:,channel), lnE(:,channel)] = gsolve(rsimages, log(exposures), 10, w);
 end
 
-plot(g);
+%plot(g);
 %plot(lnE);
 
 disp('done!');
