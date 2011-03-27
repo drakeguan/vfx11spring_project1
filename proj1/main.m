@@ -48,5 +48,10 @@ for channel = 1:3
     end
 end
 
-write_rgbe( exp(ln_E), 'output.hdr');
+imgHDR = exp(ln_E);
+write_rgbe(imgHDR, 'output.hdr');
+imgTMO = tmoReinhard02(imgHDR);
+write_rgbe(imgTMO, 'output_tmo.hdr');
+imwrite(imgTMO, 'output.png');
+
 disp('done!');
