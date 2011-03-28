@@ -1,10 +1,11 @@
 % configurations
+folder = '../image/original/exposures';
 lambda = 10;
 srow = 10;
 scol = 20;
 
 disp('loading images with different exposures.');
-[images, exposures] = readImages('exposures');
+[images, exposures] = readImages(folder);
 ln_t = log(exposures);
 
 disp('resizing the images.');
