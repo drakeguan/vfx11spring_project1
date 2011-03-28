@@ -11,10 +11,10 @@ prefix = char(tokens(end));
 
 disp('loading images with different exposures.');
 [images, exposures] = readImages(folder);
+[row, col, channel, number] = size(images);
 ln_t = log(exposures);
 
-disp('resizing the images.');
-[row, col, channel, number] = size(images);
+disp('shrinking the images to get the reasonable number of sample pixels (by srow*scol).');
 simages = zeros(srow, scol, channel, number);
 for i = 1:number
     simages(:,:,:,i) = round(imresize(images(:,:,:,i), [srow scol], 'bilinear'));
