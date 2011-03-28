@@ -1,15 +1,20 @@
 % configurations
-folder = '../image/original/exposures';
+folder = '../image/original/exposures'; % no tailing slash!
 lambda = 10;
 srow = 10;
 scol = 20;
 
+
+
+tokens = strsplit('/', folder);
+prefix = char(tokens(end));
+
 disp('loading images with different exposures.');
 [images, exposures] = readImages(folder);
+[row, col, channel, number] = size(images);
 ln_t = log(exposures);
 
-disp('resizing the images.');
-[row, col, channel, number] = size(images);
+disp('shrinking the images to get the reasonable number of sample pixels (by srow*scol).');
 simages = zeros(srow, scol, channel, number);
 for i = 1:number
     simages(:,:,:,i) = round(imresize(images(:,:,:,i), [srow scol], 'bilinear'));
@@ -48,9 +53,10 @@ for channel = 1:3
 end
 
 imgHDR = exp(ln_E);
-write_rgbe(imgHDR, 'output.hdr');
+write_rgbe(imgHDR, strcat(prefix, '.hdr'));
 imgTMO = tmoReinhard02(imgHDR, 'global', 0.18, 1e-6, 3);
-write_rgbe(imgTMO, 'output_tmo.hdr');
-imwrite(imgTMO, 'output.png');
+write_rgbe(imgTMO, [prefix '_tone_mapped.hdr']);
+imwrite(imgTMO, [prefix '_tone_mapped.png']);
 
 disp('done!');
+exit();
