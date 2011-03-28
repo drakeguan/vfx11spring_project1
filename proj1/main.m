@@ -24,8 +24,6 @@ for channel = 1:3
     rsimages = reshape(simages(:,:,channel,:), srow*scol, number);
     [g(:,channel), lnE(:,channel)] = gsolve(rsimages, ln_t, lambda, w);
 end
-%plot(g);
-%plot(lnE);
 
 disp('constructing HDR radiance map.');
 ln_E = zeros(row, col, 3);
@@ -48,5 +46,10 @@ for channel = 1:3
     end
 end
 
-write_rgbe( exp(ln_E), 'output.hdr');
+imgHDR = exp(ln_E);
+write_rgbe(imgHDR, 'output.hdr');
+imgTMO = tmoReinhard02(imgHDR, 'global', 0.18, 1e-6, 3);
+write_rgbe(imgTMO, 'output_tmo.hdr');
+imwrite(imgTMO, 'output.png');
+
 disp('done!');
