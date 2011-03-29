@@ -5,6 +5,8 @@ D99944013,
 Shuen-Huei (Drake) Guan,
 (drake.guan@gmail.com)
 
+doc online: https://github.com/drakeguan/vfx11spring/tree/master/proj1
+
 ### Project description
 
 High dynamic range (HDR) images have much larger dynamic ranges than traditional images' 256 levels. In addition, they correspond linearly to physical irradiance values of the scene. Hence, they are useful for many graphics and vision applications. In this assignment, you are asked to finish the following tasks to assemble an HDR image in a group of two.
@@ -29,6 +31,8 @@ Skip.
 #### Camera response curve & HDR
 
 Debevec's algorithm (gsolve.m + hdrDebevec.m) is used to recover the camera's response curve. 
+
+![camera response curve](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/bedroom_tone_mapped.png)
 
 In this algorithm, several sampling pixels need to pick up to feed into 'gsolve'. According to the paper and slides, 50~100 pixels are reasonable number. The issue comes next is, "which pixel should I pick up into the sampling bin?" A random pick-up has been tested several times and if the number is bigger enough, the result looks good. But that is not that guaranteed. By observation, a shrinking operator can be applied to the original images to get smaller ones. Those reduced images stil capture somehow the original images' characteristics. As long as the size is smaller enough, we can feed all pixels in smaller ones to 'gsolve'.
 
