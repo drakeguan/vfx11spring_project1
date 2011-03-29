@@ -1,13 +1,38 @@
-% configurations
-folder = '../image/original/exposures'; % no tailing slash!
-lambda = 10;
-srow = 10;
-scol = 20;
+%
+% convert an image set into HDR, then tone mapping it.
+%
+% input:
+%   folder: the (relative) path containing the image set.
+%   lambda: smoothness factor for gsolve.
+%   [srow scol]: the dimension of the resized image for sampling in gsolve.
+%   prefix: output LDR's prefix
+%
+function main(folder, lambda, srow, scol, alpha_, white_, prefix)
 
-
-
-tokens = strsplit('/', folder);
-prefix = char(tokens(end));
+%%
+% handling default parameters
+if( ~exist('folder') )
+    folder = '../image/original/exposures'; % no tailing slash!
+end
+if( ~exist('lambda') )
+    lambda = 10;
+end
+if( ~exist('srow') )
+    srow = 10;
+end
+if( ~exist('scol') )
+    scol = 20;
+end
+if( ~exist('alpha_') )
+    alpha_ = 0.18;
+end
+if( ~exist('white_') )
+    white_ = 3;
+end
+if( ~exist('prefix') )
+    tokens = strsplit('/', folder);
+    prefix = char(tokens(end));
+end
 
 disp('loading images with different exposures.');
 [images, exposures] = readImages(folder);
@@ -51,12 +76,12 @@ for channel = 1:3
 	end
     end
 end
-
 imgHDR = exp(ln_E);
-write_rgbe(imgHDR, strcat(prefix, '.hdr'));
-imgTMO = tmoReinhard02(imgHDR, 'global', 0.18, 1e-6, 3);
+write_rgbe(imgHDR, [prefix '.hdr']);
+
+imgTMO = tmoReinhard02(imgHDR, 'global', alpha_, 1e-6, white_);
 write_rgbe(imgTMO, [prefix '_tone_mapped.hdr']);
 imwrite(imgTMO, [prefix '_tone_mapped.png']);
 
 disp('done!');
-exit();
+end
