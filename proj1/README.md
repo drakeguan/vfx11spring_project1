@@ -32,6 +32,8 @@ Skip.
 
 Debevec's algorithm (gsolve.m + hdrDebevec.m) is used to recover the camera's response curve. 
 
+![camera response curve](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/bedroom_tone_mapped.png)
+
 In this algorithm, several sampling pixels need to pick up to feed into 'gsolve'. According to the paper and slides, 50~100 pixels are reasonable number. The issue comes next is, "which pixel should I pick up into the sampling bin?" A random pick-up has been tested several times and if the number is bigger enough, the result looks good. But that is not that guaranteed. By observation, a shrinking operator can be applied to the original images to get smaller ones. Those reduced images stil capture somehow the original images' characteristics. As long as the size is smaller enough, we can feed all pixels in smaller ones to 'gsolve'.
 
 One more issue to take care of in 'hdrDebevec' is computational error. Because Matlab is such powerful that there is seldom error while computing out NaN or Inf. After several testing, we found we should replace those NaN and Inf b 0 to make the following tone mapping work.
