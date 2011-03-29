@@ -7,7 +7,7 @@
 %   [srow scol]: the dimension of the resized image for sampling in gsolve.
 %   prefix: output LDR's prefix
 %
-function main(folder, lambda, srow, scol, alpha_, white_, prefix)
+function main(folder, alpha_, white_, lambda, prefix, srow, scol)
 
 %%
 % handling default parameters
@@ -65,4 +65,5 @@ write_rgbe(imgTMO, [prefix '_tone_mapped.hdr']);
 imwrite(imgTMO, [prefix '_tone_mapped.png']);
 
 disp('done!');
+exit();
 end
