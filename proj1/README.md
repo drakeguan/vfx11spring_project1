@@ -5,6 +5,8 @@ D99944013,
 Shuen-Huei (Drake) Guan,
 (drake.guan@gmail.com)
 
+doc online: https://github.com/drakeguan/vfx11spring/tree/master/proj1
+
 ### Project description
 
 High dynamic range (HDR) images have much larger dynamic ranges than traditional images' 256 levels. In addition, they correspond linearly to physical irradiance values of the scene. Hence, they are useful for many graphics and vision applications. In this assignment, you are asked to finish the following tasks to assemble an HDR image in a group of two.
