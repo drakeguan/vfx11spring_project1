@@ -46,6 +46,13 @@ Reinhard's algorithm is implemented in 'tmoReinhard02.m'. Only global operator i
 
 ### Results
 
+![camera response curve](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/desktop01_tone_mapped.png)
+![camera response curve](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/desktop02_tone_mapped.png)
+![camera response curve](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/restroom_tone_mapped.png)
+![camera response curve](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/scene_tone_mapped.png)
+![camera response curve](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/station_tone_mapped.png)
+![camera response curve](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/servers_tone_mapped.png)
+
 Please look at the 'image/tone-mapped' folder.
 
 ### References
