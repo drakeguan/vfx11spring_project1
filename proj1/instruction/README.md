@@ -1,18 +1,19 @@
 # Requirements
 
 * Matlab
-* a terminal (Linus has it!)
+* a terminal (Linux has it!)
 * uncompressed file structure of this project
 
 # Instructions
 
-* cd ~/program (the source code folder)
-* for each testing with different parameters, run 'matlab -nodesktop -nosplash -r' followed by a function call to 'main'.
-* ex, mlr "main('../image/original/scene')"
+* `cd ~/program` (the source code folder)
+* for each testing with different parameters, run `matlab -nodesktop -nosplash -r` followed by a function call to 'main'.
+* *mlr* stands for `matlab -nodesktop -nosplash -r`.
+* ex, `mlr "main('../image/original/scene')"`
 * after that, 3 files are generated:
-  * scene.hdr (HDR)
-  * scene_tone_mapped.hdr (LDR in .hdr)
-  * scene_tone_mapped.png (LDR)
+  * scene.hdr (HDR in radiance format)
+  * scene_tone_mapped.hdr (LDR in randiance format)
+  * scene_tone_mapped.png (LDR in PNG format)
 
 # Configurations
 
@@ -25,9 +26,9 @@
 * desktop01, main('../image/original/desktop01', 0.2, 50)
 * corridor, main('../image/original/corridor', 0.5, 1000)
 
-# Note
+# Function signature
 
-For function 'main', the parameters are:
+For function 'main', the parameters are as following in ordering:
 
 * folder: image set path.
 * alpha_: high key or low key?
