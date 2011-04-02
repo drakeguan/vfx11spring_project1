@@ -12,7 +12,7 @@ function main(folder, alpha_, white_, lambda, prefix, srow, scol)
 %%
 % handling default parameters
 if( ~exist('folder') )
-    folder = '../image/original/exposures'; % no tailing slash!
+    folder = '../image/original/servers'; % no tailing slash!
 end
 if( ~exist('lambda') )
     lambda = 10;
