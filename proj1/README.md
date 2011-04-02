@@ -53,17 +53,19 @@ The above idea is still questionable and doubtable cause I haven't spent much ti
 
 ### Results
 
+[![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/corridor_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/corridor_tone_mapped.png)
 [![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/desktop01_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/desktop01_tone_mapped.png)
 [![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/desktop02_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/desktop02_tone_mapped.png)
+[![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/digimax_gate_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/digimax_gate_tone_mapped.png)
 [![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/restroom_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/restroom_tone_mapped.png)
 [![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/scene_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/scene_tone_mapped.png)
-[![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/station_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/station_tone_mapped.png)
 [![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/servers_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/servers_tone_mapped.png)
+[![results](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped-thumb/station_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring/raw/master/proj1/image/tone-mapped/station_tone_mapped.png)
 
 Please look at the *image/tone-mapped* folder.
 
 ### References
 
 * Paul E. Debevec, Jitendra Malik, Recovering High Dynamic Range Radiance Maps from Photographs, SIGGRAPH 1997
-* Matlab, http://www.mathworks.com/help/techdoc/
+* Matlab, <http://www.mathworks.com/help/techdoc/>
 
