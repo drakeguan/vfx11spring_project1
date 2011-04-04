@@ -20,6 +20,7 @@ This project is my testing plan of examining the power and possibility of Open s
 
 High dynamic range (HDR) images have much larger dynamic ranges than traditional images' 256 levels. In addition, they correspond linearly to physical irradiance values of the scene. Hence, they are useful for many graphics and vision applications. In this assignment, you are asked to finish the following tasks to assemble an HDR image in a group of two.
 
+HDR artifact  
 [![HDR artifact](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/servers_tone_mapped_thumb.png "HDR artifcat")](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/servers_tone_mapped.png)
 
 ### Algorithm
