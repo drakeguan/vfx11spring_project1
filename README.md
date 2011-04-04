@@ -1,13 +1,12 @@
-# Digital Visual Effects, Spring 2011
+# [Digital Visual Effects 2011 Spring](http://www.csie.ntu.edu.tw/~cyy/courses/vfx/11spring/ "Digital Visual Effects 2011 Spring") @ CSIE.NTU.EDU.TW
 ## project #1: High Dynamic Range Imaging ([original link](http://www.csie.ntu.edu.tw/~cyy/courses/vfx/11spring/assignments/))
 
 D99944013,
 Shuen-Huei (Drake) Guan,
 (drake.guan@gmail.com)
 
-doc online: [https://github.com/drakeguan/vfx11spring_project1/tree/master](https://github.com/drakeguan/vfx11spring_project1/tree/master "online document")
+doc online: [https://github.com/drakeguan/vfx11spring_project1/](https://github.com/drakeguan/vfx11spring_project1/ "online document")
 
-# [Digital Visual Effects 2011 Spring](http://www.csie.ntu.edu.tw/~cyy/courses/vfx/11spring/ "Digital Visual Effects 2011 Spring") @ CSIE.NTU.EDU.TW
 
 ### Objective of the project
 
@@ -21,6 +20,7 @@ This project is my testing plan of examining the power and possibility of Open s
 
 High dynamic range (HDR) images have much larger dynamic ranges than traditional images' 256 levels. In addition, they correspond linearly to physical irradiance values of the scene. Hence, they are useful for many graphics and vision applications. In this assignment, you are asked to finish the following tasks to assemble an HDR image in a group of two.
 
+HDR artifact  
 [![HDR artifact](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/servers_tone_mapped_thumb.png "HDR artifcat")](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/servers_tone_mapped.png)
 
 ### Algorithm
