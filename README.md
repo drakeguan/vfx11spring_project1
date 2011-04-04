@@ -7,21 +7,23 @@ Shuen-Huei (Drake) Guan,
 
 doc online: [https://github.com/drakeguan/vfx11spring_project1/](https://github.com/drakeguan/vfx11spring_project1/ "online document")
 
+## Preliminaries
 
 ### Objective of the project
 
-This project is my testing plan of examining the power and possibility of Open source for an university course, [VFX](http://www.csie.ntu.edu.tw/~cyy/courses/vfx/11spring/overview/ "Digital Visual Effects 2011 Spring"), lectured by Prof. [Yung-Yu Chuang](http://www.csie.ntu.edu.tw/~cyy/ "Yung-Yu Chuang 莊永裕"). The project contains 4 sub-folders, each for an assignment. Some is a programming assignment while others might focus on visual effects demo. This project will host my working history of assignments and hopefully, there is something informative or helpful to myself and others :)
+This project is my testing plan of examining the power and possibility of Open source for an university course, [VFX](http://www.csie.ntu.edu.tw/~cyy/courses/vfx/11spring/overview/ "Digital Visual Effects 2011 Spring"), lectured by Prof. [Yung-Yu Chuang](http://www.csie.ntu.edu.tw/~cyy/ "Yung-Yu Chuang 莊永裕"). There are totally 4 projects, each one for an assignment in the course. This project will host my working history of assignments and hopefully, there is something informative or helpful to myself and others :)
 
 ### Introduction to the course
 
-> With the help of digital technology, visual effects have been widely used in film production lately. For example, up to April 2004, the top ten all-time best selling movies are so-called "effects movies." Six of them even won Academic awards for their visual effects. This course will cover the techniques from computer graphics, computer vision and image processing with practical or potential usages in making visual effects.
+With the help of digital technology, visual effects have been widely used in film production lately. For example, up to April 2004, the top ten all-time best selling movies are so-called "effects movies." Six of them even won Academic awards for their visual effects. This course will cover the techniques from computer graphics, computer vision and image processing with practical or potential usages in making visual effects.
 
 ### Project description
 
 High dynamic range (HDR) images have much larger dynamic ranges than traditional images' 256 levels. In addition, they correspond linearly to physical irradiance values of the scene. Hence, they are useful for many graphics and vision applications. In this assignment, you are asked to finish the following tasks to assemble an HDR image in a group of two.
 
-HDR artifact  
-[![HDR artifact](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/servers_tone_mapped_thumb.png "HDR artifcat")](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/servers_tone_mapped.png)
+### HDR artifact  
+
+[![HDR artifact](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/servers_tone_mapped_thumb.png "HDR artifcat")](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/servers_tone_mapped.png "HDR artifact")
 
 ### Algorithm
 
@@ -29,6 +31,15 @@ The following algorithms are implemented:
 
 * HDR: Debevec's algorithm in Matlab. (gsolve.m + hdrDebevec.m)
 * Tone Mapping: Reinhard's algorithm in Matlab. (tmoReinhard02.m)
+
+The whole project is implemented in Matlab, the language cool about scientific programming and visualization plotting. The entry point is *main.m*. The flow of the program is as following:
+
+* Load an image set with different exposure for each picture taken by *readImages*.
+* Prepare a down-sampling of the image set for the following *gsolve.m*.
+* Prepare a weighting function by Debevec's 1997 paper.
+* Put all stuff above into *gsolve*, each channel (assuming R, G and B) is processed separately. After this step, we get the camera's response curve(function). We can plot it directly by *plot* with some axis description if necessary.
+* Invoke *hdrDebevec* to reconstruct the HDR.
+* Invoek *tmoReinhard02* to get tone-mapped LDR image.
 
 ### Approach
 
@@ -63,16 +74,31 @@ The above idea is still questionable and doubtable cause I haven't spent much ti
 
 ### Results
 
-[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/corridor_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/corridor_tone_mapped.png)
-[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/desktop01_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/desktop01_tone_mapped.png)
-[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/desktop02_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/desktop02_tone_mapped.png)
-[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/digimax_gate_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/digimax_gate_tone_mapped.png)
-[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/restroom_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/restroom_tone_mapped.png)
-[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/scene_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/scene_tone_mapped.png)
-[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/servers_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/servers_tone_mapped.png)
-[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/station_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/station_tone_mapped.png)
+Corridor  
+[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/corridor_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/corridor_tone_mapped.png 'corridor')
 
-Please look at the *image/tone-mapped* folder.
+Desktop01  
+[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/desktop01_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/desktop01_tone_mapped.png 'desktop01')
+
+Desktop02  
+[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/desktop02_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/desktop02_tone_mapped.png 'desktop02')
+
+Digimax Gate  
+[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/digimax_gate_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/digimax_gate_tone_mapped.png 'digimax gate')
+
+Restroom  
+[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/restroom_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/restroom_tone_mapped.png 'restroom')
+
+Scene (contributed by VicJuan)  
+[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/scene_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/scene_tone_mapped.png 'scene')
+
+Servers  
+[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/servers_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/servers_tone_mapped.png 'servers')
+
+Station (contributed by VicJuan)  
+[![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/station_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/station_tone_mapped.png 'station')
+
+Please take a look at the folder [tone mapped images](image/tone-mapped 'tone mapped images') for details.
 
 ### References
 
