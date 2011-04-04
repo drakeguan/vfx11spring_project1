@@ -98,7 +98,7 @@ Servers
 Station (contributed by VicJuan)  
 [![results](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped-thumb/station_tone_mapped_thumb.png)](https://github.com/drakeguan/vfx11spring_project1/raw/master/image/tone-mapped/station_tone_mapped.png 'station')
 
-Please take a look at the folder [tone mapped images](image/tone-mapped 'tone mapped images') for details.
+Please take a look at the folder [tone mapped images](vfx11spring_project1/image/tone-mapped 'tone mapped images') for details.
 
 ### References
 
