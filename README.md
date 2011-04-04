@@ -1,13 +1,12 @@
-# Digital Visual Effects, Spring 2011
+# [Digital Visual Effects 2011 Spring](http://www.csie.ntu.edu.tw/~cyy/courses/vfx/11spring/ "Digital Visual Effects 2011 Spring") @ CSIE.NTU.EDU.TW
 ## project #1: High Dynamic Range Imaging ([original link](http://www.csie.ntu.edu.tw/~cyy/courses/vfx/11spring/assignments/))
 
 D99944013,
 Shuen-Huei (Drake) Guan,
 (drake.guan@gmail.com)
 
-doc online: [https://github.com/drakeguan/vfx11spring_project1/tree/master](https://github.com/drakeguan/vfx11spring_project1/tree/master "online document")
+doc online: [https://github.com/drakeguan/vfx11spring_project1/](https://github.com/drakeguan/vfx11spring_project1/ "online document")
 
-# [Digital Visual Effects 2011 Spring](http://www.csie.ntu.edu.tw/~cyy/courses/vfx/11spring/ "Digital Visual Effects 2011 Spring") @ CSIE.NTU.EDU.TW
 
 ### Objective of the project
 
