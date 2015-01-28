@@ -23,7 +23,7 @@ High dynamic range (HDR) images have much larger dynamic ranges than traditional
 
 ### HDR artifact  
 
-[![HDR artifact](vfx11spring_project1/raw/master/image/tone-mapped-thumb/servers_tone_mapped_thumb.png "HDR artifcat")](vfx11spring_project1/raw/master/image/tone-mapped/servers_tone_mapped.png "HDR artifact")
+[![HDR artifact](image/tone-mapped-thumb/servers_tone_mapped_thumb.png "HDR artifcat")](image/tone-mapped/servers_tone_mapped.png "HDR artifact")
 
 ### Algorithm
 
@@ -55,7 +55,7 @@ Skip.
 
 Debevec's algorithm (gsolve.m + hdrDebevec.m) is used to recover the camera's response curve. 
 
-![camera response curve](vfx11spring_project1/raw/master/image/camera_response_curve.png "reconstructed camera response curve for the used Canon 5D")
+![camera response curve](image/camera_response_curve.png "reconstructed camera response curve for the used Canon 5D")
 
 * *gsolve.m* is borrowed from Debevec's paper for reconstructing the camera's response curve,
 * *hdrDebevec.m* is to convert those LDR images into a HDR image.
@@ -66,7 +66,7 @@ One more issue to take care of in *hdrDebevec* is computational error. Because M
 
 #### Histogram of the reconstructed corridor HDR
 
-![histogram of the reconstructed corridor HDR](vfx11spring_project1/raw/master/image/hist_of_corridor_hdr.png 'histogram of the reconstructed corridor HDR')
+![histogram of the reconstructed corridor HDR](image/hist_of_corridor_hdr.png 'histogram of the reconstructed corridor HDR')
 
 ### Tone mapping
 
@@ -79,30 +79,30 @@ The above idea is still questionable and doubtable cause I haven't spent much ti
 ## Results
 
 Corridor  
-[![results](vfx11spring_project1/raw/master/image/tone-mapped-thumb/corridor_tone_mapped_thumb.png)](vfx11spring_project1/raw/master/image/tone-mapped/corridor_tone_mapped.png 'corridor')
+[![results](image/tone-mapped-thumb/corridor_tone_mapped_thumb.png)](image/tone-mapped/corridor_tone_mapped.png 'corridor')
 
 Desktop01  
-[![results](vfx11spring_project1/raw/master/image/tone-mapped-thumb/desktop01_tone_mapped_thumb.png)](vfx11spring_project1/raw/master/image/tone-mapped/desktop01_tone_mapped.png 'desktop01')
+[![results](image/tone-mapped-thumb/desktop01_tone_mapped_thumb.png)](image/tone-mapped/desktop01_tone_mapped.png 'desktop01')
 
 Desktop02  
-[![results](vfx11spring_project1/raw/master/image/tone-mapped-thumb/desktop02_tone_mapped_thumb.png)](vfx11spring_project1/raw/master/image/tone-mapped/desktop02_tone_mapped.png 'desktop02')
+[![results](image/tone-mapped-thumb/desktop02_tone_mapped_thumb.png)](image/tone-mapped/desktop02_tone_mapped.png 'desktop02')
 
 Digimax Gate  
-[![results](vfx11spring_project1/raw/master/image/tone-mapped-thumb/digimax_gate_tone_mapped_thumb.png)](vfx11spring_project1/raw/master/image/tone-mapped/digimax_gate_tone_mapped.png 'digimax gate')
+[![results](image/tone-mapped-thumb/digimax_gate_tone_mapped_thumb.png)](image/tone-mapped/digimax_gate_tone_mapped.png 'digimax gate')
 
 Restroom  
-[![results](vfx11spring_project1/raw/master/image/tone-mapped-thumb/restroom_tone_mapped_thumb.png)](vfx11spring_project1/raw/master/image/tone-mapped/restroom_tone_mapped.png 'restroom')
+[![results](image/tone-mapped-thumb/restroom_tone_mapped_thumb.png)](image/tone-mapped/restroom_tone_mapped.png 'restroom')
 
 Scene (contributed by VicJuan)  
-[![results](vfx11spring_project1/raw/master/image/tone-mapped-thumb/scene_tone_mapped_thumb.png)](vfx11spring_project1/raw/master/image/tone-mapped/scene_tone_mapped.png 'scene')
+[![results](image/tone-mapped-thumb/scene_tone_mapped_thumb.png)](image/tone-mapped/scene_tone_mapped.png 'scene')
 
 Servers  
-[![results](vfx11spring_project1/raw/master/image/tone-mapped-thumb/servers_tone_mapped_thumb.png)](vfx11spring_project1/raw/master/image/tone-mapped/servers_tone_mapped.png 'servers')
+[![results](image/tone-mapped-thumb/servers_tone_mapped_thumb.png)](image/tone-mapped/servers_tone_mapped.png 'servers')
 
 Station (contributed by VicJuan)  
-[![results](vfx11spring_project1/raw/master/image/tone-mapped-thumb/station_tone_mapped_thumb.png)](vfx11spring_project1/raw/master/image/tone-mapped/station_tone_mapped.png 'station')
+[![results](image/tone-mapped-thumb/station_tone_mapped_thumb.png)](image/tone-mapped/station_tone_mapped.png 'station')
 
-Please take a look at the folder [tone mapped images](vfx11spring_project1/tree/master/image/tone-mapped 'tone mapped images') for details.
+Please take a look at the folder [tone mapped images](image/tone-mapped 'tone mapped images') for details.
 
 ## References
 
