@@ -4,6 +4,7 @@
 D99944013,
 Shuen-Huei (Drake) Guan,
 (drake.guan@gmail.com)
+[![](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg)](https://saythanks.io/to/drakeguan)
 
 doc online: [vfx11spring_project1/](vfx11spring_project1/ "online document")
 
